@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Задача 1</title>
+    
+    
+</head>
+<body>
+   
+    <h2>Запись на курсы</h2>
+    <hr>
+    <form action="http://foo.com" method="post">
+        <label for="text">Имя</label><br>
+        <input type="text" id="text" value="Алексей">
+        <p>
+
+            Язык программирования:<br>
+
+            <input type="radio" id="r1" value="C++" name="g">
+            <label for="r1">C++</label><br>
+
+            <input type="radio" id="r2" value="PHP" name="g">
+            <label for="r2">PHP<label><br>
+
+            <input type="radio"  id="r3" value="Python" name="g">
+            <label for="r3">Python</label>
+
+        </p>
+        <p>
+            <label for="textArea">Дополнительная информация:</label><br>
+            <textarea  id="textArea"></textarea>
+        </p>
+        <p>
+            <label for="pass">Секретное слово</label>
+            <input type="password" id="pass"><br><br>
+            <button id="send" >Отправить</button>
+            <button id="clear">Очистить</button>
+        </p>
+    </form>
+    
+    <!--<script>
+        var clearButton = document.getElementById("clear");
+        var sendButton = document.getElementById("send");
+        var textArea = document.getElementById("textArea");
+        var pass = document.getElementById("pass");
+        var text = document.getElementById("text");
+        var radioFirst = document.getElementById("r1");
+        var radioSecond = document.getElementById("r2");
+        var radioThird = document.getElementById("r3");
+        var result = document.getElementById("res");
+        clearButton.addEventListener("click",function(){
+            pass.value = '';
+            text.value = '';
+            textArea.value = '';
+            radioFirst.checked = false;
+            radioSecond.checked = false;
+            radioThird.checked = false;
+            
+        })
+       
+        sendButton.addEventListener("click",function(){
+        var returnRadio = ()=>{
+            if (radioFirst.checked===true){
+                radioFirst.value
+            }else if (radioSecond.checked ===true){
+                radioSecond.value
+            }else if(radioThird.checked ===true){
+                radioThird.value}
+        };
+            var xhr = new XMLHttpRequest();
+            var json = JSON.stringify({
+                "name": text.value,
+                //language:,
+                "dopInfo": textArea.value,
+                "password":pass.value
+            });
+            url = "file:///C:/Users/Илья/Desktop/vsc_programs/projects/practic_2/easy/index.html";
+            xhr.open("POST",url,true)
+            xhr.setRequestHeader('Content-type', 'application/json; charset=utf-8');
+            xhr.onreadystatechange = function(){
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // выводим то, что ответил нам сервер — так мы убедимся, что данные он получил правильно
+                    result.innerHTML = this.responseText;
+                }
+            }
+            xhr.send(json);
+        })
+        
+
+
+        
+    </script>-->
+</body>
+</html>
+
+
+
+<!--const Http = new XMLHttpRequest();
+const url='https://jsonplaceholder.typicode.com/users';
+Http.open("GET", url);
+Http.send();
+
+Http.onreadystatechange = (e) => {
+  console.log(Http.responseText);  // => получим массив данных в формате JSON
+}-->
+
+
+
+<!--<body>
+   
+    <map name="map1">
+        <area 
+            shape="rect"
+            coords="200,50,250,125"
+            title="Клад">
+        <area 
+            shape="rect"
+            coords="400,0,500,75"
+            title="Акула">
+        <area 
+            shape="rect"
+            coords="50,250,125,300"
+            title="Осьминог">
+            
+    </map>
+    <img src="https://img-fotki.yandex.ru/get/15589/136164467.4/0_f44f5_6c0fdf57_orig.jpg" usemap="#map1"><br>
+    
+    <label for="file">Пройдено</label>
+    <progress id="file" max="100" value="50"></progress>
+    
+</body>-->
