@@ -12,35 +12,38 @@
     <h2>Запись на курсы</h2>
     <hr>
     <form action="http://foo.com" method="post">
-        <label for="text">Имя</label><br>
-        <input type="text" id="text" value="Алексей">
+        <label for="firstname">Имя</label><br>
+        <input type="text" id="text" value="Алексей" name="firstname" >
         <p>
 
             Язык программирования:<br>
 
-            <input type="radio" id="r1" value="C++" name="g">
+            <input type="radio" id="r1" value="C++" name="language">
             <label for="r1">C++</label><br>
 
-            <input type="radio" id="r2" value="PHP" name="g">
+            <input type="radio" id="r2" value="PHP" name="language">
             <label for="r2">PHP<label><br>
 
-            <input type="radio"  id="r3" value="Python" name="g">
+            <input type="radio"  id="r3" value="Python" name="language">
             <label for="r3">Python</label>
 
         </p>
         <p>
-            <label for="textArea">Дополнительная информация:</label><br>
-            <textarea  id="textArea"></textarea>
+            <label for="anotherInformation">Дополнительная информация:</label><br>
+            <textarea  id="textArea" name="anotherInformation">hello nigga</textarea>
         </p>
         <p>
-            <label for="pass">Секретное слово</label>
-            <input type="password" id="pass"><br><br>
+            <label for="password">Секретное слово</label>
+            <input type="password" id="pass" name="password"><br><br>
             <button id="send" >Отправить</button>
             <button id="clear">Очистить</button>
+            <!--важное замечание!
+            чтобы посмотреть отправленный json, нужно 
+        чтобы совпадало    label for   с    input name-->
         </p>
     </form>
     
-    <!--<script>
+    <script>
         var clearButton = document.getElementById("clear");
         var sendButton = document.getElementById("send");
         var textArea = document.getElementById("textArea");
@@ -60,7 +63,7 @@
             
         })
        
-        sendButton.addEventListener("click",function(){
+        /*sendButton.addEventListener("click",function(){
         var returnRadio = ()=>{
             if (radioFirst.checked===true){
                 radioFirst.value
@@ -85,13 +88,13 @@
                     result.innerHTML = this.responseText;
                 }
             }
-            xhr.send(json);
+            xhr.send(json);*/
         })
         
 
 
         
-    </script>-->
+    </script>
 </body>
 </html>
 
