@@ -1,0 +1,17 @@
+p::first-letter{
+    color:red;
+    font-size: 2em;
+    
+}
+p{
+    width: 90px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+.wordUpper{
+    text-decoration: none;
+}
+body{
+    background-image: url(https://img-fotki.yandex.ru/get/67890/136164467.17/0_12bc81_21263ac1_orig.png);
+}
