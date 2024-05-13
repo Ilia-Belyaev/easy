@@ -1,0 +1,35 @@
+/*1 variant*/
+/*div{
+    width: 120px;
+    height: 30px;
+    border:2px solid black;
+    margin-left: auto;/*margin left-right:auto вариант центрирования
+    margin-right: auto;
+}
+body{
+    background-image: url(fon.png);
+    
+}*/
+/*2 variant*/
+/*div{
+    width: 120px;
+    height: 30px;
+    border:2px solid black;
+    display: inline-block;/*
+}
+body{
+    background-image: url(fon.png);
+    text-align: center;/*
+}*/
+/*3 variant*/
+div{
+    width: 120px;
+    height: 30px;
+    border:2px solid black;
+    
+}
+body{
+    background-image: url(fon.png);
+    display: flex;
+    justify-content: center;
+}
