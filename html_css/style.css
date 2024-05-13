@@ -30,6 +30,18 @@ div{
 }
 body{
     background-image: url(fon.png);
-    display: flex;
-    justify-content: center;
+    
+    
+    
+}
+/*центрирование по вертикали и горизонтали*/
+.centerBlock{
+    background-image: url(pink-flowers.webp);
+    width: 240px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    margin:-30px 0 0 -120px;
+    
 }
