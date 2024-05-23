@@ -3,56 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="weather_style.css">
     <title>Центрированный блок</title>
-    <style>
-        div{
-            width: 1920px;
-            height: 200px;
-        }
-    </style>
 </head>
 <body>
-    <button>press</button>    
+    <label for="Towns">Choose town:</label>
+    <select name="Towns" id="Towns">
+        <option value="Москва,Россия">Москва</option>
+        <option value="Англия,Великобритания">Англия</option>
+        <option value="Стокгольм,Швеция">Стокгольм</option>
+        <option value="Токио,Япония">Токио</option>
+        <option value="Берлин,Германия">Берлин</option>
+    </select><br>
+    <button>Узнать погоду</button>    
     <div></div>
-    <script>
-        var but = document.querySelector("button");
-        var divText = document.querySelector("div");
-        but.addEventListener("click",()=>{
-
-            const request = new XMLHttpRequest;
-            const latitude = 55.75222;
-            const longitude = 37.61556;
-            const requestApi = new XMLHttpRequest();
-            var apiKey;
-            function getApiKey(apiKey){
-                var url = 'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={apikey}';
-                url = ((url.replace("{lat}",latitude)).replace("{lon}",longitude)).replace("{apikey}",apiKey);
-                request.open("GET",url);
-                request.send();
-                request.onload=function(){
-                    if(request.status!=200){
-                        alert('Ошибка '+ request.status +' : '+ request.statusText);
-                        divText.textContent = "Sorry";
-                    }else{
-                        alert("Complete,take "+ request.length + ' bytes');
-                        divText.textContent=((JSON.parse(request.response)).name);
-                        
-                    }
-                }
-            }
-            requestApi.onreadystatechange = function(){
-                if(this.status == 200){
-                    apiKey = requestApi.responseText;
-                    getApiKey(apiKey)
-                }
-            };
-            requestApi.open("GET","api.txt",true);
-            requestApi.send();
-            
-            
-            
-        })
-    </script>
+    <script src="script.js" type="text/javascript"></script>
 </body>
 </html>
