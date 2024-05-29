@@ -1,4 +1,6 @@
-
+div{
+    visibility:hidden;
+}
 body{
     background-image: url('photo/background_image.jpg');
     font-family: "Zilla Slab", serif;
