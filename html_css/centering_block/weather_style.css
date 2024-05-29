@@ -1,10 +1,4 @@
 
-div{
-    width: 300px;
-    height: 50px;
-    text-align: center;
-    margin-top: 10px;
-}
 body{
     background-image: url('photo/background_image.jpg');
     font-family: "Zilla Slab", serif;
@@ -18,8 +12,18 @@ body{
 button{
     width: 200px;
     margin:10px;
+    border-radius: 20px;
+    background-color: #98c4f0;
+    border:5px solid #5da3e9;
+    
+}
+button:hover{
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
 }
 input{
     width: 200px;
     margin-top:10px;
+}
+input:hover{
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
 }
